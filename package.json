@@ -1,9 +1,9 @@
 {
-    "name": " iim-backage-management-system",
+    "name": "iim-backage-management-system",
     "version": "1.0.0",
-    "description": " iim-backage-management-system",
+    "description": "iim-backage-management-system",
     "author": "qing.chen",
-    "license": "BSC",
+    "license": "BSD",
     "private": true,
     "scripts": {
         "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

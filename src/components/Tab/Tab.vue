@@ -8,6 +8,8 @@
     </span>-->
     <ul>
       <li
+        @mouseenter="handleShow(index)"
+        @mouseleave="handleHide"
         v-for="(item,index) in menu"
         :class="{
         active:activeKey == item.path
@@ -15,8 +17,8 @@
         :key="index"
         @click="handleSelect(index,item)"
       >
-        <span>{{$t(item.label)}}</span>
-        <img :src="close" alt="x" @click.stop="handleRemove(index, item)" />
+        <span :style="computedContentStyle(index)">{{$t(item.label)}}</span>
+        <img  :src="close" alt="x" :style="computedStyle(index)" @click.stop="handleRemove(index, item)" />
       </li>
     </ul>
   </div>
@@ -29,7 +31,9 @@ export default {
     return {
       close: require("@/assets/svg/close.svg"),
       left: require("@/assets/svg/arrow-left.svg"),
-      right: require("@/assets/svg/arrow-right.svg")
+      right: require("@/assets/svg/arrow-right.svg"),
+      activeIndex: -1,
+      currentIndex: -1
     };
   },
   props: {
@@ -45,6 +49,34 @@ export default {
     }
   },
   methods: {
+    computedContentStyle(index) {
+      if (this.currentIndex == index) {
+        return {
+          paddingRight: "0px"
+        };
+      } else {
+        return {
+          paddingRight: "10px"
+        };
+      }
+    },
+    computedStyle(index) {
+      if (this.currentIndex == index || this.activeIndex == index) {
+        return {
+          display: "block"
+        };
+      } else {
+        return {
+          display: "none"
+        };
+      }
+    },
+    handleShow(index) {
+      this.currentIndex = index;
+    },
+    handleHide() {
+      this.currentIndex = -1;
+    },
     handleSelect(index, item) {
       this.$emit("on-select", {
         index,
