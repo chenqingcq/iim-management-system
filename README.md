@@ -1,6 +1,6 @@
 # iim-company-visitor-reg
 
-> iim-company-visitor-register-system
+> iim-backage-management-system
 
 ## Build Setup
 

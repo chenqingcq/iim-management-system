@@ -1,8 +1,9 @@
 {
-    "name": "iim-company-visitor-reg",
+    "name": " iim-backage-management-system",
     "version": "1.0.0",
-    "description": "iim-company-visitor-register-system",
+    "description": " iim-backage-management-system",
     "author": "qing.chen",
+    "license": "BSC",
     "private": true,
     "scripts": {
         "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
