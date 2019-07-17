@@ -1,0 +1,201 @@
+body {
+  .table-row {
+    max-height: 100px !important;
+    /*no*/
+    min-height: 100px !important;
+    /*no*/
+    height: 100px;
+
+    /*no*/
+    td {
+      height : 100%;
+      padding: 0;
+    }
+  }
+
+  .ivu-modal {
+    font-size: 16px;
+    top      : 0;
+
+    .ivu-modal-header {
+      height: 50px;
+
+      .ivu-modal-header-inner {
+        height : 100%;
+        padding: 0 10px;
+        /*no*/
+        padding-left: 30px;
+        /*no*/
+        display    : flex;
+        align-items: center;
+      }
+    }
+  }
+
+  div.uploadedImage i {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.previewAvator {
+      color: #fff !important;
+    }
+  }
+
+  .ivu-modal-header {
+    padding: 0
+  }
+
+  .advertising-container {
+    th {
+      div {
+        width     : 100%;
+        text-align: center
+      }
+    }
+
+    td {
+      height: 140px;
+      /*no*/
+      text-align: center
+    }
+
+    img {
+      object-fit: cover;
+
+      &.screen {
+        display: inline-block;
+        width  : 120px;
+        /*no*/
+        height: 120px;
+
+        /*no*/
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &.active {
+        border-radius: 4px;
+        /*no*/
+        border: 4px solid #ed4014;
+        /*no*/
+      }
+    }
+  }
+
+  .preview-dialog img {
+    object-fit: contain
+  }
+
+  .ivu-modal-confirm-head-title {
+    font-size: 16px;
+  }
+
+  .ivu-icon {
+    font-size: 20px;
+  }
+
+
+  .ivu-modal-confirm-body {
+    min-height : 100px;
+    display    : flex;
+    align-items: center;
+    font-size  : 16px;
+    font-family: "PingFangSC-Regular Avenir";
+  }
+
+  .ivu-modal-wrap {
+    display        : flex;
+    justify-content: center;
+    align-items    : center
+  }
+
+  .edit-panel {
+    height         : 100%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+
+    form {
+      width: 66%;
+
+      .ivu-form-item-content {
+        label {
+          width  : 100%;
+          display: block;
+        }
+      }
+
+      .submit {
+        width: 80px;
+        float: right
+      }
+    }
+  }
+
+  .ivu-input {
+    height: 100% !important;
+  }
+
+  .ivu-icon-ios-help-circle {
+    font-size: 30px
+  }
+
+  .ivu-table-overflowX {
+    overflow-x: hidden;
+  }
+
+  .ivu-modal-fullscreen .ivu-modal-body {
+    overflow: hidden;
+  }
+
+  .personnel-management-container {
+    width     : 100%;
+    height    : 100%;
+    overflow-x: auto !important;
+  }
+
+  .center {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+  }
+
+  .demo-spin-icon-load {
+    animation: ani-demo-spin 1s linear infinite;
+  }
+
+  @keyframes ani-demo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.ivu-tabs-nav-prev,
+.ivu-tabs-nav-next {
+  width: 20px;
+  border-radius: 5px;
+  /*no*/
+  &:hover {
+    cursor    : pointer;
+    background: #d7dde4;
+    z-index   : 999
+  }
+}
+
+@media screen and (max-width:2000px) {
+  html {
+    font-size: 70px !important;
+    /*no*/
+  }
+}

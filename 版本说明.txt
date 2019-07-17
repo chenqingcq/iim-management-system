@@ -1,0 +1,2 @@
+1.主要模块：人员管理，版本管理， 机器人管理，单位管理，api管理
+2.技术栈：vue+vue-router+vuex+axios+iview+i18n
